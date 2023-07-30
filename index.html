@@ -3,9 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Personal Bank</title>
   </head>
   <body>
-    <h1>Welcome <span>SMM Bank Ltd.</span></h1>
+    <header>
+      <h1 class="text-4xl text-center my-[30px]">
+        Welcome to
+        <span class="text-5xl text-violet-700">গরিবের Bank Ltd.</span>
+      </h1>
+    </header>
+    <main>
+      <section class="w-2/5 bg-red-600 mx-auto pt-7 bg-violet-300 rounded-xl">
+        <h1 class="text-violet-950 text-center mb-7 font-semibold text-3xl">
+          Please Login
+        </h1>
+        <input
+          id="user-email"
+          class="block mb-7 w-4/6 mx-auto"
+          type="email"
+          placeholder="Enter your email"
+        />
+        <input
+          id="user-password"
+          class="block mb-7 w-4/6 mx-auto"
+          type="password"
+          placeholder="Enter your password "
+        />
+        <div class="flex justify-center pb-7">
+          <button
+            class="border-[1px] border-solid border-transparent hover:border-white hover:bg-violet-950 bg-violet-800 text-white px-6 py-3 rounded-lg"
+            id="btn-confirm"
+          >
+            Confirm
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="jsFile/login.js"></script>
   </body>
 </html>
