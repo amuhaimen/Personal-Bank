@@ -7,14 +7,19 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   const withdrawTotalElement = document.getElementById("withdraw-total");
   const previousWithdrawTotalString = withdrawTotalElement.innerText;
   const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-  const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-  withdrawTotalElement.innerText = currentWithdrawTotal;
 
   //============
   const balanceTotalElement = document.getElementById("balence-total");
   const previousBalanceString = balanceTotalElement.innerText;
   const previousBalance = parseFloat(previousBalanceString);
-  const currentBalance = previousBalance - newWithdrawAmount;
-  balanceTotalElement.innerText = currentBalance;
   withdrawField.value = "";
+  const currentBalance = previousBalance - newWithdrawAmount;
+
+  if (newWithdrawAmount > previousBalance) {
+    alert("fokinni tor balance e eto taka nai");
+    return;
+  }
+  const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+  withdrawTotalElement.innerText = currentWithdrawTotal;
+  balanceTotalElement.innerText = currentBalance;
 });
