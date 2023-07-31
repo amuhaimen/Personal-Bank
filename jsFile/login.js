@@ -10,6 +10,6 @@ document.getElementById("btn-confirm").addEventListener("click", function () {
   if (email === "amuhaimenpro829@gmail.com" && password === "secretpassword") {
     window.location.href = "insidebank.html";
   } else {
-    console.log("invalid user");
+    alert("Invalid user");
   }
 });
